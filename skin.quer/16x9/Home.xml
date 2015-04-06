@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- home -->
+	<backgroundcolor>ff387b98</backgroundcolor>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onload>
+	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
+
+	<controls>
+
+		<!-- Hidden control to load weather conditions -->
+		<control type="label">
+			<font>-</font>
+			<label>$INFO[Weather.Conditions]</label>
+		</control>
+
+		<!-- Background -->
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+		</control>
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<fadetime>320</fadetime>
+			<texture>bgtextures/bgtex_home.png</texture>
+			<animation effect="fade" start="100" end="80" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]">Conditional</animation>
+		</control>
+
+
+		<!-- Time -->
+		<include>Time</include>
+
+		<!-- Main controls -->
+		<control type="group">
+			<include>WindowFadeAnimation</include>
+
+			<!-- Quer logo -->
+			<include condition="!Skin.HasSetting(HideConqLogo)">ConqLogo</include>
+
+			<!-- Home layout -->
+			<include>HomeDefault</include>
+
+			<!-- RSS -->
+			<control type="rss" id="1">
+				<left>0</left>
+				<bottom>40</bottom>
+				<width>1920</width>
+				<height>30</height>
+				<font>Font30</font>
+				<textcolor>TextColor2</textcolor>
+				<headlinecolor>TextColor2</headlinecolor>
+				<titlecolor>TextColor2</titlecolor>
+				<urlset>1</urlset>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,24 @@
+<colors>
+
+	<!-- Default colours -->
+	<color name="TextColor1">FFFFFFFF</color>
+	<color name="TextColor2">55FFFFFF</color>
+	<color name="TextColor3">33FFFFFF</color>
+	<color name="TextColor4">11FFFFFF</color>
+	<color name="ShadowColor">44000000</color>
+	<color name="OverlayColorFO">bbFFFFFF</color>
+	<color name="OverlayColorNF">55FFFFFF</color>
+	<color name="SelectedColor">FFFFFFFF</color>
+	<color name="FanartDiffuse">22f1f1f1</color>
+	<color name="DiffusePosterNF">58ffffff</color>
+	<color name="HomeNF">44FFFFFF</color>
+	
+	<!-- Dialog colors -->
+	<color name="DialogColor1">ffffffff</color>
+	<color name="DialogColor2">55ffffff</color>
+	<color name="DisabledColor">ffa15555</color>
+	<color name="InvalidColor">ffa15555</color>
+	<color name="DialogOverlayColorFO">ffffffff</color>
+	<color name="DialogOverlayColorNF">55ffffff</color>
+
+</colors>
